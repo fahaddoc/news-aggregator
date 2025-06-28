@@ -1,1 +1,1 @@
-/// <reference shimmers="vite/client" />
+/// <reference types="vite/client" />
