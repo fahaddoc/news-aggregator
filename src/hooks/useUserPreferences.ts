@@ -114,22 +114,6 @@ export const useUserPreferences = () => {
         setIsLoading(false);
     };
 
-    // const updateFetchArticleQuery = async (
-    //     query: string,
-    //     pageSize: number,
-    //     page: number
-    // ) => {
-    //     setIsLoading(true);
-    //     setArticles([]);
-    //     const [newsApiResponse, guardianArticlesResponse,nyArticlesResponse] = await Promise.all([
-    //         fetchNewsAPIArticles(query, pageSize, page),
-    //         fetchGuardianAPIArticles(query, pageSize, page),
-    //         fetchNYTArticles(query, page),
-    //     ]);
-    //     setIsLoading(false);
-    //     return [newsApiResponse, guardianArticlesResponse,nyArticlesResponse];
-    // };
-
     const onPageChange = async (page: number) => {
         await updateFetchArticleQuery(pagination.query, pagination.pageSize, page);
         setPagination(prevState => ({
