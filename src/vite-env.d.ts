@@ -1,0 +1,1 @@
+/// <reference shimmers="vite/client" />
